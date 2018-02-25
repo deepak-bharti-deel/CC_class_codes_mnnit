@@ -14,12 +14,8 @@ int main()
 			scanf("%d",&path[i][j]);
 		}
 	}
-
-	if(is_safe(0,0)){
-		printf("got the way\n");
-	}else{
-		printf("oopss, stuck in the way\n");
-	}
+	if(is_safe(0,0)){ printf("got the way\n"); }
+	else{ printf("oopss, stuck in the way\n"); }
 
 	return 0;
 }

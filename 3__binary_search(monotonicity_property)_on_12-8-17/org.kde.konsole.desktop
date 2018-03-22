@@ -1,0 +1,28 @@
+[Desktop Action NewTab]
+Exec=konsole --new-tab
+Name=Open a New Tab
+
+[Desktop Action NewWindow]
+Exec=konsole
+Name=Open a New Window
+
+[Desktop Entry]
+Actions=NewWindow;NewTab;
+Categories=Qt;KDE;System;TerminalEmulator;
+Comment=Command line access
+Exec=konsole
+GenericName=Terminal
+Icon=utilities-terminal
+Name=Konsole
+NoDisplay=false
+Path[$e]=
+StartupNotify=false
+Terminal=0
+TerminalOptions=
+TryExec=konsole
+Type=Application
+X-DBUS-StartupType=Unique
+X-DocPath=konsole/index.html
+X-KDE-AuthorizeAction=shell_access
+X-KDE-SubstituteUID=false
+X-KDE-Username=

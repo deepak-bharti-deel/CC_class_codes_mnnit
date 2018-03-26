@@ -23,7 +23,6 @@ int main()
 		// n&1, (100 & 0001  == 0), n is even
 	}
 
-
 	return 0;
 }
 
@@ -53,4 +52,14 @@ while(scanf("%d",&arr[i++])!=EOF);    // this will continue scanning integers un
 
 INT_MAX = max int value
 FLT_MAX = max float value
+
+==============>>
+
+#define ll long long 
+int(a/b)  is right
+ll(a/b)   is wrong
+do like this
+(ll)(a/b)  is okay
+
+==============>>
 

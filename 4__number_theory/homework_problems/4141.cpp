@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long int
 
 ll a0,a1,c,n,t;
-int i;
+int i,x,y,z,cm;
 
 int main()
 {
@@ -11,15 +11,25 @@ int main()
 	scanf("%lld",&t);
 	while(t--){
 		scanf("%lld %lld %lld %lld",&a0,&a1,&c,&n);
-		no=to_string(a0)+to_string(a1);
+
+		cm=(a0*10+a1)%41;
+		x=a0; y=a1;
 		for(i=2; i<n; ++i){
-			no+=to_string(((no[i-1]-'0')*c + (no[i-2]-'0'))%10);
+			z=(y*c + x)%10;
+			cm=(cm*10+z)%41;
+			x=y;
+			y=z;
 		}
-		if(stoi(no)%41==0)
+
+		if(n==1 && a0==0)
+			printf("YES\n");
+		else if(n>1 && cm==0)
 			printf("YES\n");
 		else
 			printf("NO\n");
+
 	}
 
 	return 0;
 }
+

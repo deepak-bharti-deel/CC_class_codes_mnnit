@@ -5,7 +5,6 @@ int i,t,n;
 
 int main()
 {
-	// printf("%0.0f\n",ceil(2.5));
 	scanf("%d",&t);
 	while(t--){
 		scanf("%d",&n);

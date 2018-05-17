@@ -5,25 +5,34 @@ using namespace std;
 int main()
 {
 	int n,i,j,arr[100001];
+	int lisat[1000001];
 	scanf("%d",&n);
-	fl(n){
+	fl(i,n){
 		scanf("%d",&arr[i]);
 	}
 
-	fl(i,n){ arr[i]=1; }
+	fl(i,n){ lisat[i]=1; }
+	
+	int flag;
 
 	fl(i,n){
+		flag=0;
 		fl(j,i){
+			cout<<arr[j]<<" "<<arr[i]<<"\n";
 			if(arr[j]<arr[i]){
-				arr[i]=max(arr[i],arr[j]);
+				lisat[i]=max(lisat[i],lisat[j]); flag=1;
 			}
 		}
-		arr[i]+=1;
+		if(flag){ lisat[i]+=1; }
 	}
-	int ans=arr[0];
+	int ans=1;
 	fl(i,n){
-		if(arr[i]>ans)
-			ans=arr[i];
+		printf("%d ",lisat[i]);
+	}
+	cout<<"\n";
+	fl(i,n){
+		if(lisat[i]>ans)
+			ans=lisat[i];
 	}
 
 	printf("ans is %d\n",ans);

@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define fl(i,n) for(i=0; i<n; ++i)
+#define pb push_back
+
+void dfs(int node);
+int node,n,a,b,i,j,max_node,temp,visited[100001];
+vector <int> graph[100001];
+vector <int> ::iterator it;
+
+int main()
+{
+
+	memset(visited,0,sizeof(visited));
+	printf("Enter the no of edges\n");
+	scanf("%d",&n);
+	max_node=-1;
+	fl(i,n){
+		scanf("%d%d",&a,&b);
+		graph[a].pb(b);
+		graph[b].pb(a);
+		temp=max(a,b);
+		if(temp>max_node)
+			max_node=temp;
+	}
+	max_node+=1;
+
+	printf("Adjacany list representation of graph\n");
+	fl(i,max_node){
+		if(graph[i].size()>0){
+			fl(j,graph[i].size())
+				printf("%d %d\n",i,graph[i][j]);
+		}
+	}
+
+	// cout<<max_node<<"\n";
+	printf("Enter a node to traverse all connected nodes\n");
+	scanf("%d",&node);
+	dfs(node);
+
+	fl(i,max_node){
+		if(visited[i])
+			printf("%d %d\n",i,visited[i]);
+	}
+	
+	return 0;
+}
+
+void dfs(int node)
+{
+	visited[node]=1;
+	printf("visited %d\n",node);
+	fl(j,graph[node].size()){
+		cout<<graph[node][j]<<"\n";
+	}
+	fl(j,graph[node].size()){
+		printf("%d\n",visited[graph[node][j]]);
+		if(!visited[graph[node][j]]){
+			printf("going to visit node %d\n",graph[node][j]);
+			dfs(graph[node][j]);
+		}
+	}
+}

@@ -14,8 +14,9 @@ int main()
 	memset(visited,0,sizeof(visited));
 	printf("Enter the no of edges\n");
 	scanf("%d",&n);
+	// max_node, just a utility
 	max_node=-1;
-	fl(i,n){
+	for(i=0; i<n; ++i){
 		scanf("%d%d",&a,&b);
 		graph[a].pb(b);
 		graph[b].pb(a);
@@ -28,7 +29,7 @@ int main()
 	printf("Adjacany list representation of graph\n");
 	fl(i,max_node){
 		if(graph[i].size()>0){
-			fl(j,graph[i].size())
+			for(j=0; j<graph[i].size(); ++j)
 				printf("%d %d\n",i,graph[i][j]);
 		}
 	}
@@ -38,6 +39,7 @@ int main()
 	scanf("%d",&node);
 	dfs(node);
 
+	//visited nodes
 	fl(i,max_node){
 		if(visited[i])
 			printf("%d %d\n",i,visited[i]);
@@ -48,16 +50,16 @@ int main()
 
 void dfs(int node)
 {
+	int i;
 	visited[node]=1;
-	printf("visited %d\n",node);
-	fl(j,graph[node].size()){
-		cout<<graph[node][j]<<"\n";
+	// adjacency list of node
+	fl(i,graph[node].size()){
+		cout<<graph[node][i]<<"\n";
 	}
-	fl(j,graph[node].size()){
-		printf("%d\n",visited[graph[node][j]]);
-		if(!visited[graph[node][j]]){
-			printf("going to visit node %d\n",graph[node][j]);
-			dfs(graph[node][j]);
+	// visiting neighbours of node
+	fl(i,graph[node].size()){
+		if(!visited[graph[node][i]]){
+			dfs(graph[node][i]);
 		}
 	}
 }

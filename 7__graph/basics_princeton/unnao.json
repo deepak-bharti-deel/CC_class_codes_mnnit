@@ -1,0 +1,59 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Unnao",
+               "short_name" : "Unnao",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Unnao",
+               "short_name" : "Unnao",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Uttar Pradesh",
+               "short_name" : "UP",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "India",
+               "short_name" : "IN",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Unnao, Uttar Pradesh, India",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 26.5882201,
+                  "lng" : 80.56446079999999
+               },
+               "southwest" : {
+                  "lat" : 26.5000729,
+                  "lng" : 80.4037857
+               }
+            },
+            "location" : {
+               "lat" : 26.5393449,
+               "lng" : 80.4878195
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 26.5882201,
+                  "lng" : 80.56446079999999
+               },
+               "southwest" : {
+                  "lat" : 26.5000729,
+                  "lng" : 80.4037857
+               }
+            }
+         },
+         "place_id" : "ChIJ74l6VLgVnDkRG49AfjYk5_c",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

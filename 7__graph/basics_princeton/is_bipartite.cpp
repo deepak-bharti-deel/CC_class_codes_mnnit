@@ -12,8 +12,8 @@ vector <int> ::iterator it;
 
 int main()
 {
-	int temp=-1;
-	cout<<" ~-1 ="<<~temp<<" ~(~temp) "<<~temp<<"\n";
+	// int temp=-1;
+	// cout<<" ~-1 ="<<~temp<<" ~(~temp) "<<~temp<<"\n";
 	memset(colour,1,sizeof(visited));
 	memset(visited,0,sizeof(visited));
 	printf("Enter the no of edges\n");
@@ -35,8 +35,8 @@ int main()
 			for(j=0; j<graph[i].size(); ++j)
 				printf("%d %d\n",i,graph[i][j]);
 		}
-	}
-	// cout<<max_node<<"\n";
+	
+		// cout<<max_node<<"\n";
 	printf("Enter a node to run bfs from\n");
 	scanf("%d",&node);
 	bfs(node);
@@ -54,7 +54,7 @@ void bfs(int node)
 	int i;
 	queue <int> nodes;
 	nodes.push(node);
-	int expected_clr =-1;
+	int expected_clr=-1;
 	colour[node]=expected_clr;
 	while(!nodes.empty()){
 		printf("inside while\n");

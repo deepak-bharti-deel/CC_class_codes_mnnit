@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define fl(i,n) for(i=0; i<n; ++i)
+// #define fl(i,n) for(i=0; i<n; ++i)
 #define pb push_back
 
 
